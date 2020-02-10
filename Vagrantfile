@@ -24,10 +24,10 @@ Vagrant.configure("2") do |config|
     rm install.sh
     rm -r c_api/solution_src/kiki_api.c
     cp /vagrant/starter/kiki_api.c c_api/solution_src/kiki_api.c
-    mkdir ~/kiki/kernel_module/src
-    cp /vagrant/comp-2018-operating-system/kernel_module/src/correction_stats_struct.* ~/kiki/kernel_module/src/
-    chown -R vagrant kiki
-    chgrp -R vagrant kiki
+    mkdir -p kernel_module/src
+    cp /vagrant/comp-2018-operating-system/kernel_module/src/correction_stats_struct.* kernel_module/src/
+    chown -R vagrant /home/vagrant/kiki
+    chgrp -R vagrant /home/vagrant/kikivag
   SHELL
 
   config.vm.provision "shell", inline: <<-SHELL
