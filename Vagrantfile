@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
     mkdir -p kernel_module/src
     cp /vagrant/comp-2018-operating-system/kernel_module/src/correction_stats_struct.* kernel_module/src/
     chown -R vagrant /home/vagrant/kiki
-    chgrp -R vagrant /home/vagrant/kikivag
+    chgrp -R vagrant /home/vagrant/kiki
   SHELL
 
   config.vm.provision "shell", inline: <<-SHELL
